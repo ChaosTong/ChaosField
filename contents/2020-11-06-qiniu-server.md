@@ -3,7 +3,7 @@ title: 图床使用七牛云图片处理
 abstract: 图床使用, 七牛云图片处理、费用、接口使用
 tags:
   - hexo
-abbrlink: 图床使用
+abbrlink: picture_api
 date: 2020-11-06 11:54:23
 ---
 ## 七牛图片存储服务
