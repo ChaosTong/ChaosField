@@ -1,12 +1,12 @@
 ---
-title: Hexo ftpsync错误分析&修复 (OutDated)
+title: Hexo ftpsync错误分析&修复
 abstract: '直接修改源码, 简单暴力'
 tags:
   - hexo
   - deploy
   - ftp
   - ftpsync
-abbrlink: 7c588c01
+abbrlink: hexo_ftpsync
 date: 2019-07-18 12:30:25
 ---
 
