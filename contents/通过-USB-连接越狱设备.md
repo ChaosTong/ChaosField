@@ -13,7 +13,7 @@ iproxy 2222 22
 ssh root@localhost 2222
 ```
 
-# dumpdecrypted 通过 MonkeyDev 的简单使用
+## dumpdecrypted 通过 MonkeyDev 的简单使用
 
 [魔改 dumpdecrypted](https://github.com/AloneMonkey/dumpdecrypted) 直接 Command+B 通过 MonkeyDev 可以复制到越狱机器中, 发生错误修改端口即可, 取决用你链接手机的方式和端口号.
 需要在该项目中的 plist 文件中指定相应的 bundle id
