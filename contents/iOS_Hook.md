@@ -1,10 +1,10 @@
 ---
 title: iOS Hook
-abbrlink: ios_hook
+abbrlink: iOS_hook
 date: 2020-11-24 15:37:26
 abstract: iOS Hook
 tags:
-  - ios
+  - iOS
   - hook
 ---
 
