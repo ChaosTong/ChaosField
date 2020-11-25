@@ -149,3 +149,56 @@ tar
     -f  输出文件
     -z  输出重定向给 gzip 来压缩内容
 ```
+
+## Linux 环境变量
+
+- 全局环境变量: shell 会话和所有生成的子 shell 都是可见的
+- 局部环境变量: 只对创建它们的 shell 可见
+
+```shell
+# 查看环境变量
+env
+# 设置全局环境变量
+export https_proxy=http://127.0.0.1:6152;export http_proxy=http://127.0.0.1:6152;export all_proxy=socks5://127.0.0.1:6153
+# echo $PATH 显示
+/Users/chaostong/.cargo/bin:/opt/MonkeyDev/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/Users/chaostong/.rvm/bin:/Users/chaostong/miniconda2/bin
+# 设置 PATH 引用原值
+PATH=$PATH:/usr/local/bin/fastlane
+```
+
+### 环境变量持久化
+
+- 交互式 shell 进程: 不是登录系统时启动的, 启动时只会检查用户 `HOME` 目录的 `.zshrc` 文件
+
+`shell` 进程杀掉后 全局环境变量还是没了, 持久化需要写入 `~/.zshrc` 中, 然后 `source` 或者重启 `shell` 进程
+
+## 文件权限
+
+### 第一位
+
+- `-` 文件
+- `d` 目录
+- `l` 链接
+- `c` 字符型设备
+- `b` 块设备
+- `n` 网络设备
+
+### 第二位 三组字符
+
+第一个是文件属主的权限, 第二个是属组成员的权限, 第三个是其他用户权限
+
+- `r` 可读
+- `w` 可写
+- `x` 可执行
+
+### 默认文件权限
+
+```shell
+touch fuck.md
+ll fuck.md
+-rw-r--r--  1 chaostong  staff     0B Nov 25 15:58 fuck.md
+# 默认权限设置
+umask
+# 输出 022, 3位八进制 属主 属组 其他用户
+
+```
