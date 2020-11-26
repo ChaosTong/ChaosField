@@ -199,6 +199,10 @@ ll fuck.md
 -rw-r--r--  1 chaostong  staff     0B Nov 25 15:58 fuck.md
 # 默认权限设置
 umask
-# 输出 022, 3位八进制 属主 属组 其他用户
+# 输出 022, 3位八进制 属主 属组 其他用户, 644 就是 022 对应的文件默认权限
+# 对文件来说 666(全权限值) - 022 = 644, 文件夹是 777 - 022 = 755
 
+# 改变权限
+chmod options mode file
+chmod 760 fuck.md
 ```

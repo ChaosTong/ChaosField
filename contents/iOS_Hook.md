@@ -15,6 +15,7 @@ tags:
 
 1. 越狱手机一台, 安装 *openssh*
 2. 安装 [MonkeyDev](https://github.com/AloneMonkey/MonkeyDev/wiki/安装)
+3. 上文中实战讲的很清楚了, 按照步骤来即可, 最重要和复杂的就是找到需要 `hook` 的函数, 以及参数
 
 ## 原文中 hook 代码调整
 
@@ -42,6 +43,24 @@ tags:
     }else{
         %orig;
     }
+}
+%end
+```
+
+若只是为了打卡可以更直接一些
+
+```shell
+#import <CoreLocation/CoreLocation.h>
+
+%hook CLLocation
+-(CLLocationCoordinate2D) coordinate
+{
+    CLLocationCoordinate2D location;
+    //纬度
+    location.latitude = 25.012345;
+    //经度
+    location.longitude = 109.49328;
+    return location;
 }
 %end
 ```
